@@ -32,7 +32,7 @@
   },
   "data_provider": {
     "source": "duckdb",
-    "enable_fallback": false,
+    "enable_fallback": true,
     "tushare_api_url": "http://api.tushare.pro",
     "tushare_token": "",
     "default_api_key": "",
@@ -69,7 +69,7 @@
     "postgres_table_30min": "dat_30mins",
     "postgres_table_60min": "dat_60mins",
     "postgres_table_day": "dat_day",
-    "duckdb_path": "databases/duckdb/quantifydata.duckdb",
+    "duckdb_path": "/Users/zhen/stock_data.duckdb",
     "duckdb_query_page_size": 20000,
     "duckdb_table_1min": "dat_1mins",
     "duckdb_table_5min": "dat_5mins",
@@ -78,7 +78,7 @@
     "duckdb_table_30min": "dat_30mins",
     "duckdb_table_60min": "dat_60mins",
     "duckdb_table_day": "dat_day",
-    "backtest_cache_db_source": "",
+    "backtest_cache_db_source": "duckdb",
     "llm_api_url": "https://api.deepseek.com",
     "llm_api_key": "",
     "llm_model": "deepseek-v4-flash",
@@ -87,8 +87,8 @@
     "strategy_llm_model": "deepseek-v4-flash",
     "strategy_llm_timeout_sec": 240,
     "api_key": "",
-    "adjustment_mode": "hfq",
-    "tdxdir": "D:\\new_tdx64",
+    "adjustment_mode": "none",
+    "tdxdir": "",
     "tdx_host": "",
     "tdx_port": 0,
     "tdx_node_list": "",
@@ -145,15 +145,15 @@
     "active_ids": []
   },
   "risk_control": {
-    "max_stop_loss_pct": 0.1,
+    "max_stop_loss_pct": 8,
     "max_pos_per_stock": 1,
     "max_total_pos": 1,
     "max_daily_loss_pct": 0.05,
-    "max_drawdown_pct": 0.06
+    "max_drawdown_pct": 0
   },
   "trading_cost": {
     "commission_rate": 0.00025,
-    "min_commission": 5,
+    "min_commission": 5.0,
     "stamp_duty": 0.001,
     "transfer_fee": 0
   },
@@ -278,7 +278,7 @@
         }
       }
     },
-    "last_applied_profile": "cn_equity_mid_long",
+    "last_applied_profile": "cn_equity_intraday",
     "last_applied_market": "A股"
   },
   "live_monitoring": {
@@ -338,7 +338,7 @@
       "weekly_attribution_report": true
     },
     "minute_close_confirm": {
-      "enabled": false
+      "enabled": true
     }
   },
   "webhook_notification": {
